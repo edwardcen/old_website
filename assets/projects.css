@@ -1,0 +1,21 @@
+.project_display {
+    width: 75%;
+    min-width: 500px;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin: 3px;
+    margin-left: 100px;
+    float: center;
+    border: 1px solid;
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    background-color: #4ABDBC;
+}
+
+#ball_game {
+	width: 600px;
+	height: 400px;
+	background: black;
+	margin: 10px;
+}
