@@ -10,7 +10,39 @@
 	<link rel = "icon" href = "../assets/tab_icon.png">
 	<link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel = "stylesheet" href = "../assets/styles.css">
-		<link rel = "stylesheet" href = "../assets/projects.css">
+	<link rel = "stylesheet" href = "../assets/projects.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#software_proj").hide();	
+			$("#data_proj").hide();	
+			$("#game_proj").hide();			
+			$("#featured_proj_butt").click(function(){
+				$(".selected").removeClass("selected");
+				$(this).addClass("selected");
+				$(".project_container").hide();	
+				$("#featured_proj").show();	
+			});
+			$("#software_proj_butt").click(function(){
+				$(".selected").removeClass("selected");
+				$(this).addClass("selected");
+				$(".project_container").hide();	
+				$("#software_proj").show();	
+			});
+			$("#data_proj_butt").click(function(){
+				$(".selected").removeClass("selected");
+				$(this).addClass("selected");
+				$(".project_container").hide();	
+				$("#data_proj").show();		
+			});
+			$("#game_proj_butt").click(function(){
+				$(".selected").removeClass("selected");
+				$(this).addClass("selected");
+				$(".project_container").hide();	
+				$("#game_proj").show();	
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -18,17 +50,15 @@
 		<div id = "sidebar_content">
 			<div class = "sidebar_name">Edward Cen</div>
 			<div class = "sidebar_category">About</div>
-			<a href = "../pages/home.html"><div class = "sidebar_content">Home</div></a>
-			<a href = "../pages/aboutme.html"><div class = "sidebar_content">About Me (pt. 2)</div></a>
-			<a href = "../pages/projects.html"><div class = "sidebar_content">Projects</div></a>
+			<a class = "sidebar_link" href = "../pages/home.html"><div class = "sidebar_content">Home</div></a>
+			<a class = "sidebar_link" href = "../pages/aboutme.html"><div class = "sidebar_content">About Me (pt. 2)</div></a>
+			<a class = "sidebar_link" href = "../pages/projects.html"><div class = "sidebar_content">Projects</div></a>
 			<div class = "sidebar_category">Blog</div>
-			<a href = "../pages/blog.html"><div class = "sidebar_content">Blog (pt. 2)</div></a>
+			<a class = "sidebar_link" href = "../pages/blog.html"><div class = "sidebar_content">Blog (pt. 2)</div></a>
 			<div class = "sidebar_category">Contact</div>
-			<a href = "../resume/publicresume.pdf"><div class = "sidebar_content">Resume</div></a>
-			<a href = "https://linkedin.com/in/edwardcen"><div class = "sidebar_content">LinkedIn</div></a>
-			<a href = "https://github.com/edwardcen"><div class = "sidebar_content">Github</div></a>
-
-
+			<a class = "sidebar_link" href = "../resume/publicresume.pdf"><div class = "sidebar_content">Resume</div></a>
+			<a class = "sidebar_link" href = "https://linkedin.com/in/edwardcen"><div class = "sidebar_content">LinkedIn</div></a>
+			<a class = "sidebar_link" href = "https://github.com/edwardcen"><div class = "sidebar_content">Github</div></a>
 			<div id = "show_sidebar">
 				<!-- Sidebar by Hea Poh Lin from The Noun Project -->
 				<img src = "../assets/sidebar_icon.svg">
@@ -36,12 +66,83 @@
 		</div>
 	</div>
 
-	<div class = "project_display">
-		<canvas id = "ball_game" width = "600" height = "400"></canvas>
-		<script src = "../assets/ball_game.js"></script>
+	<div id = "content">
+	<h1>Projects</h1>
+	<div id = "button_bar">
+		<div class = "project selected" id = "featured_proj_butt"><span>Featured</span></div>
+		<div class = "project" id = "software_proj_butt"><span>Software</span></div>
+		<div class = "project" id = "data_proj_butt"><span>Data</span></div>
+		<div class = "project" id = "game_proj_butt"><span>Games</span></div>
 	</div>
-	<div class = "project_display">
+	<div class = "project_container" id = "featured_proj">
+		<div class = "project_display">
+			<div class = "project_media">
+				<canvas id = "ball_game" width = "600" height = "400"></canvas>
+				<script src = "../assets/ball_game.js"></script>
+			</div>
+			<div class = "project_description">
+				<div class = "project_title">Pong</div>
+				<div class = "project_writeup">Pong is a game I created that centers around
+				blah blah lbah blasdhasf.asfdaksd;l</div>
+				<div class = "project_links">
+					<button class = "button"><span> Github</span></button>
+				</div>
+			</div>
+
+		</div>
+		<div class = "project_display">
+		</div>
 	</div>
+	<div class = "project_container" id = "software_proj">
+		<div class = "project_display">
+			<canvas id = "ball_game" width = "600" height = "400"></canvas>
+			<button class = "button"><span> Github</span></button>
+		</div>
+		<div class = "project_display">
+		</div>
+	</div>
+	<div class = "project_container" id = "data_proj">
+		<div class = "project_display">
+			<div class = "project_media">
+				<image src = "../assets/images/foodatlas_photo.jpg"></canvas>
+			</div>
+			<div class = "project_description">
+				<div class = "project_title">Food Atlas Data Analysis</div>
+				<div class = "project_writeup">
+					Using the Foot Atlas open-source dataset, I developed qualitiative and categorical plots that relate various factors including demographics, access to food, median income and more to overall health of each county, measured by the adult obesity proportion. I also created a linear regression model on obesity rate and a logistic regression model on classifying states with up to 11% improved accuracy than null methods. All work done using Jupyter Notebook and with standard scientific python libraries. Notebooks, datasets used, and accompanying writeup included in Github repository.
+				</div>
+				<div class = "project_links">
+					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/food_atlas">Github</a></span></button>
+				</div>
+			</div>
+		</div>
+		<div class = "project_display">
+		</div>
+	</div>
+	<div class = "project_container" id = "game_proj">
+		<div class = "project_display">
+			<div class = "project_media">
+				<image src = "../assets/images/3dttt_photo.jpg"></canvas>
+			</div>
+			<div class = "project_description">
+				<div class = "project_title">3D Tic Tac Toe</div>
+				<div class = "project_writeup">
+					Using the Foot Atlas open-source dataset, I developed qualitiative and categorical plots that relate various factors including demographics, access to food, median income and more to overall health of each county, measured by the adult obesity proportion. I also created a linear regression model on obesity rate and a logistic regression model on classifying states with up to 11% improved accuracy than null methods. All work done using Jupyter Notebook and with standard scientific python libraries. Notebooks, datasets used, and accompanying writeup included in Github repository.
+				</div>
+				<div class = "project_links">
+					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/food_atlas">Github</a></span></button>
+				</div>
+			</div>
+		</div>
+		<div class = "project_display">
+		</div>
+	</div>
+
+	<footer class="footer">
+	<center><hr width="50%" align="center"></center>
+	<p> ©2017 Edward Cen. All rights reserved. </p>
+	</footer>
+
 
 </body>
 

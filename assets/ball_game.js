@@ -43,7 +43,7 @@ var ball = {
 }
 
 var left_wall = {
-	length: 50,
+	length: 75,
 	width: 5,
 	x_pos: 0,
 	y_pos: 185,
@@ -54,14 +54,14 @@ var left_wall = {
 		if (myGameArea.keys && myGameArea.keys[87]) {this.y_pos -= this.speed; } //w
 		if (myGameArea.keys && myGameArea.keys[83]) {this.y_pos += this.speed; } //s
 		if (this.y_pos < 0) {this.y_pos = 0; }
-		if (this.y_pos > 350) {this.y_pos = 350; }
+		if (this.y_pos > 400 - this.length) {this.y_pos = 400 - this.length; }
 		myGameArea.ctx.fillStyle = this.color;
 		myGameArea.ctx.fillRect(this.x_pos, this.y_pos, this.width, this.length);
 	}
 }
 
 var right_wall = {
-	length: 50,
+	length: 75,
 	width: 5,
 	x_pos: 595,
 	y_pos: 185,
@@ -72,7 +72,7 @@ var right_wall = {
 		if (myGameArea.keys && myGameArea.keys[38]) {this.y_pos -= this.speed; } //up
 		if (myGameArea.keys && myGameArea.keys[40]) {this.y_pos += this.speed; }	//down
 		if (this.y_pos < 0) {this.y_pos = 0; }
-		if (this.y_pos > 350) {this.y_pos = 350; }
+		if (this.y_pos > 400 - this.length) {this.y_pos = 400 - this.length; }
 		myGameArea.ctx.fillStyle = this.color;
 		myGameArea.ctx.fillRect(this.x_pos, this.y_pos, this.width, this.length);
 	}	
@@ -249,6 +249,12 @@ var myGameArea = {
         window.addEventListener('keyup', function (e) {
             myGameArea.keys[e.keyCode] = false; 
         })	
+        window.addEventListener("keydown", function(e) {
+    		// space and arrow keys
+    		if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        		e.preventDefault();
+    		}
+		}, false);
 	},
 	clear: function() {
 		this.ctx.clearRect(0, 0, 600, 400);

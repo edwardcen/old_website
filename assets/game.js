@@ -9,9 +9,7 @@ function draw() {
 	//Controls what happens when it approaches bottom wall
 	else if(y + dy > canvas.height - ball_radius - paddle_height) {
 		if(x > paddleX && x < paddleX + paddle_width && 
-			y + dy < canvas.height - ball_radius - paddle_height + 3) {
-			dy = -1 * (dy * ((momentum / 100) + 1));
-			
+			y + dy < canvas.height - ball_radius - paddle_height + 3) {			
 		}
 		else if (y + dy > canvas.height + ball_radius + 20) {			
 			alert("Game Over");
@@ -86,20 +84,36 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
+    	e.preventDefault();
         rightPressed = true;
     }
     else if(e.keyCode == 37) {
+    	e.preventDefault();
         leftPressed = true;
     }
 }
 
 function keyUpHandler(e) {
     if(e.keyCode == 39) {
+    	e.preventDefault();
         rightPressed = false;
     }
     else if(e.keyCode == 37) {
+    	e.preventDefault();
         leftPressed = false;
     }
 }
+
+var ar = new Array(37,39);
+$(document).keydown(function(e) {
+     var key = e.which;
+      //console.log(key);
+      //if(key==35 || key == 36 || key == 37 || key == 39)
+      if($.inArray(key,ar) > -1) {
+          e.preventDefault();
+          return false;
+      }
+      return true;
+});
 
 setInterval(draw, 10)

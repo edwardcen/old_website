@@ -11,7 +11,7 @@ body {
     float: none;
 }
 
-a {
+.sidebar_link {
 	text-decoration: none;
 	color: #FC4A1A;
 }
@@ -108,4 +108,15 @@ a {
     top: 200px;
     width: 480px;
     height: 360px;
+}
+
+.footer{
+    background: #F6F6F6;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12pt;
 }
