@@ -50,7 +50,7 @@
 		<div id = "sidebar_content">
 			<div class = "sidebar_name">Edward Cen</div>
 			<div class = "sidebar_category">About</div>
-			<a class = "sidebar_link" href = "../pages/home.html"><div class = "sidebar_content">Home</div></a>
+			<a class = "sidebarebar_link" href = "../pages/home.html"><div class = "sidebar_content">Home</div></a>
 			<a class = "sidebar_link" href = "../pages/aboutme.html"><div class = "sidebar_content">About Me (pt. 2)</div></a>
 			<a class = "sidebar_link" href = "../pages/projects.html"><div class = "sidebar_content">Projects</div></a>
 			<div class = "sidebar_category">Blog</div>
@@ -82,25 +82,31 @@
 			</div>
 			<div class = "project_description">
 				<div class = "project_title">Pong</div>
-				<div class = "project_writeup">Pong is a game I created that centers around
-				blah blah lbah blasdhasf.asfdaksd;l</div>
+				<div class = "project_writeup">Pong is a two player game I created that centers around bouncing a ball using paddles that are user controlled to prevent the ball from going past the screen. The game keeps track of the two players scores and resets after each goal. The game is designed to be interactive, with javascript tracking of mouse location to enable buttons on HTML canvas. To introduce an element of randomness, the ball's intial direction is highly variant, but always at the same speed.</div>
 				<div class = "project_links">
-					<button class = "button"><span> Github</span></button>
+					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/edwardcen.github.io/tree/master/assets">Github</a></span></button>
 				</div>
 			</div>
 
 		</div>
-		<div class = "project_display">
-		</div>
 	</div>
 	<div class = "project_container" id = "software_proj">
 		<div class = "project_display">
-			<canvas id = "ball_game" width = "600" height = "400"></canvas>
-			<button class = "button"><span> Github</span></button>
-		</div>
-		<div class = "project_display">
+			<div class = "project_media">
+				<image src = "../assets/images/stockwebscraper_photo.png"></canvas>
+			</div>
+			<div class = "project_description">
+				<div class = "project_title">Stock Prices Web Scraper</div>
+				<div class = "project_writeup">
+					I designed an interpreter using a read_eval_print loop and string manipulation that can continuously read in user input about the stocks they wish to track and which exact data points they are interested in. Then I used the standard requests library in Python to pull real-time data from the Yahoo Finance API and parse it into a Pandas dataframe that can then be displayed. The interpreter also keeps track of the history of searches such that the user can easily switch between different stocks without having to reload information.
+				</div>
+				<div class = "project_links">
+					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/stockwebscraper">Github</a></span></button>
+				</div>
+			</div>
 		</div>
 	</div>
+
 	<div class = "project_container" id = "data_proj">
 		<div class = "project_display">
 			<div class = "project_media">
@@ -116,8 +122,7 @@
 				</div>
 			</div>
 		</div>
-		<div class = "project_display">
-		</div>
+
 	</div>
 	<div class = "project_container" id = "game_proj">
 		<div class = "project_display">
@@ -130,11 +135,9 @@
 					Using the Foot Atlas open-source dataset, I developed qualitiative and categorical plots that relate various factors including demographics, access to food, median income and more to overall health of each county, measured by the adult obesity proportion. I also created a linear regression model on obesity rate and a logistic regression model on classifying states with up to 11% improved accuracy than null methods. All work done using Jupyter Notebook and with standard scientific python libraries. Notebooks, datasets used, and accompanying writeup included in Github repository.
 				</div>
 				<div class = "project_links">
-					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/food_atlas">Github</a></span></button>
+					<button class = "button"><span><a class = "project_link" href = "https://github.com/edwardcen/3dttt">Github</a></span></button>
 				</div>
 			</div>
-		</div>
-		<div class = "project_display">
 		</div>
 	</div>
 
