@@ -1,0 +1,137 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	overflow: wrap; 
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+} 
+button {
+	color: #fff;
+	background-color: #000;
+	border: none;
+	text-decoration:underline;
+}
+button:hover {
+	color: #30D34E;
+	cursor: pointer;
+	text-decoration:underline;
+}
+button:focus{
+    outline: none;   
+}
+.trans {
+	-webkit-transition: opacity 0.7s linear;
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+}
+#default {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+.container-fluid {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	margin-top: 0px;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	background-color: #000;
+}
+#nameHolder {
+	margin-top: 20%;
+	margin-left: 36%;
+	margin-right: 36%;
+	position: relative;
+}
+#aboutHolder {
+	margin-top: 0px;
+	margin-left: 38%;
+	margin-right: 38%;
+	position: relative;
+}
+#name {
+	font-size: 400%;
+	font-weight: 600; 
+	overflow: wrap;
+}
+#subname {
+	font-size: 33px;
+	line-height: 53px;
+	color: #ccc;
+}
+#subname a {
+	font-size: 28px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+.subheading {
+	color: #30D34E;
+	font-weight: 600;
+	margin-top: 8px;
+	text-align: center;
+}
+.subabout {
+	color: #fff;
+	text-align: center;
+}
+.subemail {
+	margin-top: 8px;
+	color: #30D34E;
+}
+.subsubabout {
+	margin-top: 16px;
+	color: #30D34E;
+}
+#about-container {
+	font-size: 14px;
+}
+#about-container a {
+	color: #30D34E;
+	text-decoration: none;
+}
+#rocket:hover {
+	color: #CE1141;
+	cursor: pointer;
+}
+
+.subsubabout a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.copyright {
+	color: #000;
+	font-size: 8px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+@media only screen and (max-width: 768px) {
+  body { font-size: 16px; }
+}
+@media only screen and (max-width: 320px) {
+  body { font-size: 10px; }
+}
+@media only screen and (max-width: 428px) {
+	#name-container{margin-top: 25%;}
+	#about-container{margin-top: -10%;}
+}
+@media only screen and (min-width: 428px) {
+	#name-container{margin-top: 25%;}
+	#about-container{margin-top: -12%;}
+}
