@@ -26,7 +26,7 @@ presets.o = function (x, y, s, dx, dy) {
             ctx.beginPath();
             ctx.arc(this.x + + Math.sin((50 + x + (t / 10)) / 100) * 3, this.y + + Math.sin((45 + x + (t / 10)) / 100) * 4, this.r, 0, 2 * Math.PI, false);
             ctx.lineWidth = this.w;
-            ctx.strokeStyle = '#30D34E';
+            ctx.strokeStyle = '#8caec9';
             ctx.stroke();
         }
     }

@@ -40,6 +40,9 @@ button:focus{
 	padding: 0;
 	background-color: #000;
 }
+.home {
+	font-size: 28px;
+}
 .container-fluid {
 	position: absolute;
 	z-index: 2;
@@ -59,7 +62,7 @@ button:focus{
 	position: relative;
 }
 #aboutHolder {
-	margin-top: 0px;
+	margin-top: -3%;
 	margin-left: 38%;
 	margin-right: 38%;
 	position: relative;
