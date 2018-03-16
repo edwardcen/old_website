@@ -29,7 +29,7 @@ button:focus{
 	-moz-transition: all 0.7s ease-in-out;
 	-o-transition: all 0.7s ease-in-out;
 }
-#default {
+#canvas {
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -51,7 +51,6 @@ button:focus{
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
-	background-color: #000;
 }
 #nameHolder {
 	margin-top: 20%;
