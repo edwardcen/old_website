@@ -43,6 +43,9 @@ button:focus{
 .home {
 	font-size: 28px;
 }
+.home1 {
+	font-size: 28px;
+}
 .container-fluid {
 	position: absolute;
 	z-index: 2;
@@ -62,6 +65,12 @@ button:focus{
 	position: relative;
 }
 #aboutHolder {
+	margin-top: -3%;
+	margin-left: 38%;
+	margin-right: 38%;
+	position: relative;
+}
+#projectHolder {
 	margin-top: -3%;
 	margin-left: 38%;
 	margin-right: 38%;
